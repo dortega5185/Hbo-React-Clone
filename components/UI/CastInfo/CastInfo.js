@@ -24,7 +24,7 @@ const CastInfo = (props) => {
           <li>Donald Pierce</li>
         </ul>
         <ul className='cast-info__crew'>
-          <li>Margit O'Reilly</li>
+          <li>Margit Reilly</li>
           <li>Rebecca Dilone</li>
         </ul>
         <ul className='cast-info__crew'>

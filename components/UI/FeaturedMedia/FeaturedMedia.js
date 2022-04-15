@@ -8,7 +8,7 @@ const FeaturedMedia = (props) => {
         src='https://www.youtube.com/embed/NYH2sLid0Zc?autoplay=1&loop=1&start=16'
         title='Playing a video of the mortal combat movie'
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-        allowfullscreen
+        allowFullScreen
       />
       <div className='featured-media__bg'>
         <div className='featured-media__container'>
