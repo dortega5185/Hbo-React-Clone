@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const SideNav = (props) => {
   return (
     <div className='side-nav'>
@@ -6,87 +8,137 @@ const SideNav = (props) => {
       </div>
       <ul className='side-nav__main'>
         <li>
-          <a href='/' className='active'>
-            Home
-          </a>
+          <Link href='/home'>
+            <a className='active'>Home</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Series</a>
+          <Link href='/'>
+            <a>Series</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Movies</a>
+          <Link href='/movies'>
+            <a>Movies</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Originals</a>
+          <Link href='/'>
+            <a>Originals</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Just Added</a>
+          <Link href='/'>
+            <a>Just Added</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Last Chance</a>
+          <Link href='/'>
+            <a>Last Chance</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Coming Soon</a>
+          <Link href='/'>
+            <a>Coming Soon</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Trending Now</a>
+          <Link href='/'>
+            <a>Trending Now</a>
+          </Link>
         </li>
       </ul>
       <div className='side-nav__divider' />
       <ul className='side-nav__main'>
         <li>
-          <a href='/'>Action</a>
+          <Link href='/'>
+            <a>Action</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Animation</a>
+          <Link href='/'>
+            <a>Animation</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Comedy</a>
+          <Link href='/'>
+            <a>Comedy</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Crime</a>
+          <Link href='/'>
+            <a>Crime</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Documentaries</a>
+          <Link href='/'>
+            <a>Documentaries</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Drama</a>
+          <Link href='/'>
+            <a>Drama</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Fantasy & Sci-fi</a>
+          <Link href='/'>
+            <a>Fantasy & Sci-fi</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Horror</a>
+          <Link href='/'>
+            <a>Horror</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>International</a>
+          <Link href='/'>
+            <a>International</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Kids & Family</a>
+          <Link href='/'>
+            <a>Kids & Family</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Latino</a>
+          <Link href='/'>
+            <a>Latino</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Music</a>
+          <Link href='/'>
+            <a>Music</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>News/Talk</a>
+          <Link href='/'>
+            <a>News/Talk</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Reality</a>
+          <Link href='/'>
+            <a>Reality</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Romance</a>
+          <Link href='/'>
+            <a>Romance</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Shorts</a>
+          <Link href='/'>
+            <a>Shorts</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Sports</a>
+          <Link href='/'>
+            <a>Sports</a>
+          </Link>
         </li>
         <li>
-          <a href='/'>Suspense</a>
+          <Link href='/'>
+            <a>Suspense</a>
+          </Link>
         </li>
       </ul>
     </div>
