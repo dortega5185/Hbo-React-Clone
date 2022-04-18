@@ -1,7 +1,25 @@
 import { useState, useEffect } from 'react'
+import axios from 'axios'
+import { shuffleArray } from '../../utilities'
 
 const MediaRow = (props) => {
   const [loadingData, setLoadingData] = useState(true)
+  const [movies, setMoviesData] = useState([])
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.themoviedb.org/3/${props.endpoint}&api_key=34f8aece18cbea8314f29cbe98eb1637&language=en-US`
+      )
+      .then(function (response) {
+        setMoviesData(shuffleArray(response.data.results))
+        setLoadingData(false)
+        console.log(response)
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+  }, [])
 
   const loopComp = (comp, digit) => {
     let thumbnails = []
@@ -12,10 +30,11 @@ const MediaRow = (props) => {
   }
 
   const showThumbnails = () => {
-    setTimeout(() => setLoadingData(false), 3000)
     return loadingData
       ? loopComp(<Skeleton />, 10)
-      : loopComp(<Thumbnail />, 10)
+      : movies.map((movie) => {
+          return <Thumbnail movieData={movie} />
+        })
   }
 
   return (
@@ -29,10 +48,13 @@ const MediaRow = (props) => {
   )
 }
 
-const Thumbnail = () => {
+const Thumbnail = (props) => {
   return (
     <div className='media-row__thumbnail'>
-      <img src='/img/nobody.jpg' alt='Image of Nobody movie poster' />
+      <img
+        src={`https://image.tmdb.org/t/p/original${props.movieData.poster_path}`}
+        alt='Poster of movie'
+      />
       <div className='media-row__top-layer'>
         <i className='fas fa-play' />
       </div>

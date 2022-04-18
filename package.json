@@ -10,6 +10,7 @@
     "export": "next build && next export"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "local-storage": "^2.0.0",
     "next": "^12.1.5",
     "react": "18.0.0",
