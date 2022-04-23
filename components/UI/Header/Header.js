@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useStateContext } from '../../HBOProvider'
 import Account from '../Account/Account'
 import SearchModal from '../SearchModal/SearchModal'
@@ -28,7 +29,12 @@ const Header = (props) => {
             <i className='fas fa-search' />
           </div>
         </div>
-        <div className='top-header__logo'></div>
+        <Link href='/'>
+          <a>
+            <div className='top-header__logo'></div>
+          </a>
+        </Link>
+
         <div
           className='top-header__account'
           onClick={() =>

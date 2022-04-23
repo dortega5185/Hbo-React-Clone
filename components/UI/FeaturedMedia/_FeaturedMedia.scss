@@ -11,6 +11,15 @@
     z-index: 1;
     transform: scale(1.5);
   }
+  &__img {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.5);
+  }
   &__bg {
     background: linear-gradient(
       180deg,
@@ -35,6 +44,7 @@
     font-weight: 700;
     color: white;
     margin-bottom: 1rem;
+    cursor: pointer;
   }
   &__playing {
     font-size: 0.9rem;

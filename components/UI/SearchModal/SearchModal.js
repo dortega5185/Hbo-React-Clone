@@ -3,13 +3,13 @@ import { useStateContext } from '../../HBOProvider'
 const SearchModal = (props) => {
   const globalState = useStateContext()
 
-  const loopComp = (comp, digit) => {
-    let thumbnails = []
-    for (let index = 0; index < digit; index++) {
-      thumbnails.push(comp)
-    }
-    return thumbnails
-  }
+  // const loopComp = (comp, digit) => {
+  //   let thumbnails = []
+  //   for (let index = 0; index < digit; index++) {
+  //     thumbnails.push(comp)
+  //   }
+  //   return thumbnails
+  // }
   return (
     <div
       className={`search-modal ${
@@ -21,7 +21,6 @@ const SearchModal = (props) => {
           className='search-modal__input'
           type='text'
           placeholder='search for a title'
-          value=''
         />
         <div
           className='search-modal__close-btn'
@@ -34,15 +33,12 @@ const SearchModal = (props) => {
       </div>
       <h3 className='search-modal__title'>Popular Searches</h3>
       <div className='search-modal__thumbnails'>
-        {loopComp(
-          <div className='search-modal__thumbnail'>
-            <img src='/img/nobody.jpg' alt='Image of Nobody movie poster' />
-            <div className='search-modal__top-layer'>
-              <i className='fas fa-play' />
-            </div>
-          </div>,
-          10
-        )}
+        <div className='search-modal__thumbnail'>
+          <img src='/img/nobody.jpg' alt='Image of Nobody movie poster' />
+          <div className='search-modal__top-layer'>
+            <i className='fas fa-play' />
+          </div>
+        </div>
       </div>
     </div>
   )
