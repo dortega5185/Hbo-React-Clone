@@ -46,7 +46,7 @@ const Header = (props) => {
             alt='Picture of random person'
             className='top-header__user-img'
           />
-          <div className='top-header__user-name'>Bryant</div>
+          <div className='top-header__user-name'>{globalState.user}</div>
         </div>
         <Account />
         <SearchModal />

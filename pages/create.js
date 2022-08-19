@@ -106,10 +106,10 @@ export default function CreateUser() {
           </div>
         </div>
         <div className='create-user__buttons'>
-          <button className='create-user__cancel'>Cancel</button>
           <button className='create-user__save' onClick={saveUser}>
             Save
           </button>
+          <button className='create-user__cancel'>Cancel</button>
         </div>
       </div>
     </div>

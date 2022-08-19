@@ -20,7 +20,7 @@ const MediaRow = (props) => {
       .catch(function (error) {
         console.log(error)
       })
-  }, [])
+  }, [props.updateData])
 
   const loopComp = (comp, digit) => {
     let thumbnails = [

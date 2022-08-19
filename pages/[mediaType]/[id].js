@@ -19,7 +19,9 @@ export default function SingleMediaPage(props) {
   // useEffect(() => {
   //   axios
   //     .get(
-  //       `https://api.themoviedb.org/3/movie/${props.query.id}?api_key=34f8aece18cbea8314f29cbe98eb1637&language=en-US`
+  //       `https://api.themoviedb.org/3/movie/${props.query.id}?api_key=${
+  //        process.env.API_KEY
+  //      }&language=en-US`
   //     )
   //     .then(function (response) {
   //       setMediaData(response.data)
@@ -41,14 +43,17 @@ export default function SingleMediaPage(props) {
         }
         mediaUrl={`https://image.tmdb.org/t/p/original${props.mediaData.backdrop_path}`}
         location='text'
-        linkUrl={`/`}
+        linkUrl={`/movies/id`}
         type='single'
+        mediaType={props.query.mediaType}
+        mediaId={props.query.id}
       />
       <LazyLoad
         offset={-400}
         placeholder={<Placeholders title='Movies' type='large-v' />}
       >
         <MediaRow
+          updateData={props.query.id}
           title='Similar To This'
           type='small-v'
           mediaType={props.query.mediaType}
@@ -57,7 +62,11 @@ export default function SingleMediaPage(props) {
           }/similar?`}
         />
       </LazyLoad>
-      <CastInfo mediaId={props.query.id} mediaType={props.mediaType} />
+      <CastInfo
+        mediaId={props.query.id}
+        mediaType={props.query.mediaType}
+        updateData={props.query.id}
+      />
     </MainLayout>
   )
 }
